@@ -1,4 +1,25 @@
 {
-  "name": "application-name",
-  "version": "0.0.1"
+  "name": "mean_login",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "sample code for login system with mean",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/28kayak/mean_login.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "Kaya Ota",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/28kayak/mean_login/issues"
+  },
+  "homepage": "https://github.com/28kayak/mean_login#readme",
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
 }
