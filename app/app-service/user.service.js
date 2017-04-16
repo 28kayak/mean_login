@@ -39,11 +39,11 @@
         return $http.delete('/api/users/' + _id).then(handleSuccess, handleError);
     }
     //private functions
-    function handleSuccess()
+    function handleSuccess(res)
     {
         return res.data;
     }
-    function handleError()
+    function handleError(res)
     {
         return $q.reject(res.data);
     }

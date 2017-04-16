@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Mean Stack Login and User Registration Example</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="app-content/app.css" rel="stylesheet" />
 
+</head>
+<body class="container">
+    <header>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home"> Home </a></li>
+            <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account"> Account</a></li>
+            <li> <a href="/login" target="_self"> LOGOUT </a> </li>
+        </ul>
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+    </header>
+    <!-- main -->
+    <main ui-view></main>
+    <!-- footer -->
+    <footer></footer>
+    <!-- external script -->
+    <script src="app.js"></script>
+    <script src="app-service/user.service.js"></script>
+    <script src="app-service/flash.service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
 </body>
 </html>
